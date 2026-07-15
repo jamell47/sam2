@@ -1,0 +1,70 @@
+.vision__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.vision__card {
+  position: relative;
+  padding: 30px 26px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+
+.vision__card:hover {
+  border-color: var(--electric-blue);
+  box-shadow: var(--glow-blue);
+}
+
+.vision__icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  background: var(--grad-blue-soft);
+  border: 1px solid var(--glass-border);
+  color: var(--electric-blue);
+  font-size: 1.5rem;
+  box-shadow: var(--glow-blue);
+}
+
+.vision__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  margin-bottom: 8px;
+}
+
+.vision__card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.vision__beam {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(30, 144, 255, 0.12) 40deg, transparent 80deg);
+  animation: beam 8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.vision__card:hover .vision__beam {
+  opacity: 1;
+}
+
+@keyframes beam {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .vision__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .vision__grid { grid-template-columns: 1fr; }
+}

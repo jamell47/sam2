@@ -1,0 +1,83 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, #0a1430 0%, #050505 65%);
+  overflow: hidden;
+}
+
+.loader__glow {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30, 144, 255, 0.35), transparent 60%);
+  filter: blur(40px);
+  animation: loaderPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(0.85); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.loader__logo {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 24px rgba(30, 144, 255, 0.8));
+}
+
+.loader__name {
+  position: relative;
+  z-index: 2;
+  margin-top: 26px;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.5em;
+  font-weight: 700;
+  background: var(--grad-blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader__slogan {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.loader__bar {
+  position: relative;
+  z-index: 2;
+  margin-top: 36px;
+  width: min(340px, 70vw);
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.loader__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--grad-blue);
+  box-shadow: var(--glow-blue);
+}
+
+.loader__pct {
+  position: relative;
+  z-index: 2;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--electric-blue);
+  letter-spacing: 0.2em;
+}

@@ -1,0 +1,113 @@
+.testi__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.testi__viewport {
+  position: relative;
+  width: min(760px, 100%);
+  min-height: 260px;
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.testi__card {
+  text-align: center;
+  margin: 0;
+}
+
+.testi__quote {
+  font-size: 2.4rem;
+  color: var(--electric-blue);
+  filter: drop-shadow(var(--glow-blue));
+  margin-bottom: 18px;
+}
+
+.testi__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.testi__author {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testi__avatar {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--grad-blue);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  box-shadow: var(--glow-blue);
+}
+
+.testi__author strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.testi__author em {
+  display: block;
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.testi__arrow {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  color: var(--white);
+  transition: background 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.testi__arrow:hover {
+  background: var(--grad-blue);
+  box-shadow: var(--glow-blue);
+}
+
+.testi__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.testi__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.testi__dot.is-active {
+  width: 28px;
+  background: var(--grad-blue);
+  box-shadow: var(--glow-blue);
+}
+
+@media (max-width: 640px) {
+  .testi__arrow { display: none; }
+  .testi__viewport { padding: 32px 24px; }
+}

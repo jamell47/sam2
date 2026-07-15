@@ -1,0 +1,15 @@
+.heading {
+  margin-bottom: 56px;
+}
+
+.heading--center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading--center .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}

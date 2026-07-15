@@ -1,0 +1,41 @@
+.tech__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.tech__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--white);
+  transition: border-color 0.4s var(--ease);
+  animation: techFloat 6s ease-in-out infinite;
+}
+
+.tech__chip:hover {
+  border-color: var(--electric-blue);
+}
+
+.tech__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--grad-blue);
+  box-shadow: var(--glow-blue);
+}
+
+@keyframes techFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech__chip { animation: none; }
+}
